@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bd2ce4d-5c1e-4110-9a6f-f6ffb2dc7911" name="Default" comment="" />
+    <list default="true" id="0bd2ce4d-5c1e-4110-9a6f-f6ffb2dc7911" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/IndexController.php" afterPath="$PROJECT_DIR$/controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+    </list>
     <ignored path="sanMvc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/welcome.php">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+            <state relative-caret-position="209">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -34,14 +39,18 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/core/db/dbconnect.php" />
         <option value="$PROJECT_DIR$/views/welcome.php" />
+        <option value="$PROJECT_DIR$/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -83,6 +92,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -145,13 +155,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core" />
+    </key>
   </component>
   <component name="RunManager" selected="PHPUnit.articles">
     <configuration default="false" name="articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -173,6 +188,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -202,6 +223,7 @@
       <option name="presentableId" value="Default" />
       <updated>1470281535260</updated>
       <workItem from="1470281537379" duration="1057000" />
+      <workItem from="1470475009245" duration="1126000" />
     </task>
     <servers />
   </component>
@@ -211,7 +233,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1057000" />
+    <option name="totallyTimeSpent" value="2183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="32" width="1288" height="670" extended-state="0" />
@@ -219,21 +241,21 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -244,33 +266,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controllers/IndexController.php">
+    <entry file="file://$PROJECT_DIR$/views/welcome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding>
-            <marker date="1470281645000" expanded="true" signature="9:89" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1470281645000" expanded="true" signature="171:255" placeholder="..." />
-            <marker date="1470281645000" expanded="true" signature="200:253" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        <state relative-caret-position="19">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <marker date="1470282146000" expanded="false" signature="9:90" placeholder=" Created by PhpStorm. ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -289,6 +289,187 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470280708000" expanded="true" signature="9:89" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1470280708000" expanded="true" signature="108:713" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="157:210" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="249:548" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="321:397" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="425:481" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="489:540" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="589:709" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/error_manager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470280708000" expanded="true" signature="9:89" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1470280708000" expanded="true" signature="112:342" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="158:340" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="182:334" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="204:265" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="287:325" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/fileManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470280708000" expanded="true" signature="10:90" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1470280708000" expanded="true" signature="110:4247" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="165:1039" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="335:1006" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="401:918" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="452:904" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="549:860" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="1093:2112" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="1255:2078" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="1322:2007" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="1375:1993" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="1474:1949" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="2169:2349" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="2274:2318" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="2407:2669" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="2536:2638" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="2729:3400" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="2840:3369" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="2883:2937" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="2963:3359" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="3064:3236" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="3121:3218" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="3459:4243" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="3700:4213" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="4079:4174" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470280708000" expanded="false" signature="9:89" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1470280708000" expanded="true" signature="93:194" placeholder="//..." />
+            <marker date="1470280708000" expanded="true" signature="240:1790" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="376:510" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="559:1788" placeholder="{...}" />
+            <marker date="1470280708000" expanded="true" signature="741:819" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="870:986" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="1038:1186" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="1201:1245" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="1283:1730" placeholder="..." />
+            <marker date="1470280708000" expanded="true" signature="1319:1720" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470282292000" expanded="true" signature="9:89" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1470282292000" expanded="true" signature="132:3556" placeholder="{...}" />
+            <marker date="1470282292000" expanded="true" signature="198:259" placeholder="{...}" />
+            <marker date="1470282292000" expanded="true" signature="297:729" placeholder="{...}" />
+            <marker date="1470282292000" expanded="true" signature="426:440" placeholder="select * fro... ${$tableName}" />
+            <marker date="1470282292000" expanded="true" signature="541:654" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="599:644" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="662:700" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="781:1219" placeholder="{...}" />
+            <marker date="1470282292000" expanded="true" signature="907:952" placeholder="select * fro... ${$tableName}" />
+            <marker date="1470282292000" expanded="true" signature="1034:1144" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="1089:1134" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="1152:1190" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="1265:1663" placeholder="{...}" />
+            <marker date="1470282292000" expanded="true" signature="1395:1434" placeholder="select * fro... ${$tableName}" />
+            <marker date="1470282292000" expanded="true" signature="1528:1588" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="1596:1634" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="1717:1937" placeholder="{...}" />
+            <marker date="1470282292000" expanded="true" signature="1820:1863" placeholder="delete from " />
+            <marker date="1470282292000" expanded="true" signature="1986:2667" placeholder="{...}" />
+            <marker date="1470282292000" expanded="true" signature="2143:2209" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="2258:2493" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="2344:2410" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="2418:2483" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="2552:2593" placeholder="update ${$ta... " />
+            <marker date="1470282292000" expanded="true" signature="2710:3554" placeholder="{...}" />
+            <marker date="1470282292000" expanded="true" signature="2899:2965" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="3014:3365" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="3098:3226" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="3234:3355" placeholder="..." />
+            <marker date="1470282292000" expanded="true" signature="3424:3480" placeholder="INSERT INTO ${$tableName}... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470474969000" expanded="true" signature="9:88" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1470474969000" expanded="true" signature="102:862" placeholder="..." />
+            <marker date="1470474969000" expanded="true" signature="161:234" placeholder="..." />
+            <marker date="1470474969000" expanded="true" signature="282:359" placeholder="..." />
+            <marker date="1470474969000" expanded="true" signature="430:860" placeholder="..." />
+            <marker date="1470474969000" expanded="true" signature="513:688" placeholder="..." />
+            <marker date="1470474969000" expanded="true" signature="557:601" placeholder="..." />
+            <marker date="1470474969000" expanded="true" signature="704:752" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1470475034000" expanded="true" signature="9:89" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1470475034000" expanded="true" signature="133:217" placeholder="..." />
+            <marker date="1470475034000" expanded="true" signature="162:215" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <marker date="1470282146000" expanded="false" signature="9:90" placeholder=" Created by PhpStorm. ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
