@@ -16,20 +16,33 @@ class module
 
     }
 
+    //数据页数
+    public function totalPage($line){
+        $count=count($this->All());
+        if ($count<$line){
+            $totalPage=1;
+        }
+        elseif($count%$line){
+            $totalPage=(int)($count/$line)+1;
+        }
+        else{
+            $totalPage=$count/$line;
+        }
+        return $totalPage;
+    }
+
     //完整查询
     public function All()
     {
         $tableName = $this->tableName;
         $data = array();
-        $dc = dbconnect::dbconn();
-        $findAllSql = "select * from $tableName";
+        $dc = dbConnect::dbConn();
+        $findAllSql = "select * from $tableName ORDER BY id DESC";
         $findAll = $dc->query($findAllSql);
         if (mysqli_num_rows($findAll) > 0) {
             while ($arr = mysqli_fetch_array($findAll)) {
                 $data[] = $arr;
             }
-        } else {
-            $data = array();
         }
         return $data;
     }
@@ -39,15 +52,13 @@ class module
     {
         $tableName = $this->tableName;
         $data = array();
-        $dc = dbconnect::dbconn();
-        $findSql = "select * from $tableName where $name='$value'";
+        $dc = dbConnect::dbConn();
+        $findSql = "select * from $tableName where $name='$value' ORDER BY id DESC";
         $find = $dc->query($findSql);
         if (mysqli_num_rows($find) > 0) {
             while ($arr = mysqli_fetch_array($find)) {
                 $data[] = $arr;
             }
-        } else {
-            $data = array();
         }
         return $data;
     }
@@ -56,14 +67,12 @@ class module
     public function findById($id)
     {
         $tableName = $this->tableName;
-        $data = array();
-        $dc = dbconnect::dbconn();
+        $data = null;
+        $dc = dbConnect::dbConn();
         $findByIdSql = "select * from $tableName where id='$id'";
         $findById = $dc->query($findByIdSql);
         if (mysqli_num_rows($findById) > 0) {
             $data = mysqli_fetch_array($findById);
-        } else {
-            $data = array();
         }
         return $data;
     }
@@ -72,7 +81,7 @@ class module
     public function delete($name, $value)
     {
         $tableName = $this->tableName;
-        $dc = dbconnect::dbconn();
+        $dc = dbConnect::dbConn();
         $deleteSql = "delete from $tableName where $name='$value'";
         $delete = $dc->query($deleteSql);
         return $delete;
@@ -96,11 +105,12 @@ class module
                 $set = "$set $name[$i]='$val[$i]'";
             }
         }
-        $dc = dbconnect::dbconn();
+        $dc = dbConnect::dbConn();
         $updateSql = "update $tableName set $set where id='$id'";
         $update = $dc->query($updateSql);
         return $update;
     }
+
     //插入
     public function insert($data)
     {
@@ -122,9 +132,45 @@ class module
                 $sql_values = "$sql_values'$val[$i]'";
             }
         }
-        $dc = dbconnect::dbconn();
+        $dc = dbConnect::dbConn();
         $insertSql = "INSERT INTO $tableName ($sql_names) VALUES ($sql_values)";
         $insert = $dc->query($insertSql);
         return $insert;
+    }
+
+    //登陆
+    public function login($user)
+    {
+        $tableName = $this->tableName;
+        $username = $user['username'];
+        $password = md5($user['password']);
+        $dc = dbConnect::dbConn();
+        $loginSql = "SELECT id FROM $tableName WHERE username='$username' AND password='$password'";
+        $login = $dc->query($loginSql);
+        if (mysqli_num_rows($login) > 0) {
+            $data = mysqli_fetch_array($login);
+            $login = $data['id'];
+        } else {
+            $login = false;
+        }
+        return $login;
+    }
+
+    //分页查询
+    public function paginate($page, $line)
+    {
+        $data = array();
+        $start=($page-1)*$line;
+        $tableName = $this->tableName.'_desc';
+        $dc = dbConnect::dbConn();
+        $paginateSql = "SELECT * FROM $tableName LIMIT $start,$line";
+        $paginate = $dc->query($paginateSql);
+        if (mysqli_num_rows($paginate) > 0) {
+            while ($arr = mysqli_fetch_array($paginate)) {
+                $data[] = $arr;
+            }
+            return $data;
+        }
+        return $data;
     }
 }

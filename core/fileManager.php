@@ -124,6 +124,7 @@ class fileManager
                 echo fread($handle,$buffer);
             }
             fclose($handle);
+            $result=true;
         }
         return $result;
     }

@@ -11,7 +11,7 @@
 //2. /controller/id
 //3. /controller/method
 //4. /controller/method/id
-include_once 'error_manager.php';
+include_once CORE_PATH.'/error_manager.php';
 class route
 {
     protected $n = 0;
@@ -51,7 +51,7 @@ class route
                 $methodName = $route[2];    //请求的方法名
                 include_once CONTROLLERS_BASE_PATH."/{$controllerPath}.php"; //控制器完整路径
                 $controllerName=preg_replace("{^.*[/$]}","",$controllerPath);   //最后一个 "/" 后为控制器类名
-                new $controllerName($methodName,$id);   //调用控制器和方法,
+                new $controllerName($methodName,$id);   //调用控制器和方法
                 exit();
             }
         }
