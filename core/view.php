@@ -38,6 +38,39 @@ class view
         unset($_SESSION['errorInfo']);
         return $this;
     }
+    //总页数
+    public function totalPage($count,$line){
+        if ($count<$line){
+            $totalPage=1;
+        }
+        elseif($count%$line){
+            $totalPage=(int)($count/$line)+1;
+        }
+        else{
+            $totalPage=$count/$line;
+        }
+        return $totalPage;
+    }
+
+    //读取每页数据
+    public function pageData($arr,$page,$lines){
+        $start=($page-1)*$lines;
+        $data=array_slice($arr,$start,$lines);
+        return $data;
+    }
+
+    //模糊查询
+    public function search($arr,$name,$value){
+        $data=array();
+        foreach ($arr as $item){
+            $val=$item[$name];
+            if (strpos($val,$value)!==false){
+                $data[]=$item;
+            }
+        }
+        return $data;
+    }
+
     //分页
     public static function paginate($totalPage){
         $url=$_SERVER['PHP_SELF'];
