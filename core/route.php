@@ -11,7 +11,7 @@
 //2. /controller/id
 //3. /controller/method
 //4. /controller/method/id
-include_once CORE_PATH.'/error_manager.php';
+include_once './core/error_manager.php';
 class route
 {
     protected $n = 0;
