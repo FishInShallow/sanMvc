@@ -5,7 +5,7 @@
  * Date: 16/7/17
  * Time: 下午3:58
  */
-include 'db/dbConnect.php';
+include CORE_PATH . '/db/dbConnect.php';
 class module
 {
     protected $tableName;
@@ -13,22 +13,6 @@ class module
     function __construct($tableName)
     {
         $this->tableName = $tableName;  //初始化表名
-
-    }
-
-    //数据页数
-    public function totalPage($line){
-        $count=count($this->All());
-        if ($count<$line){
-            $totalPage=1;
-        }
-        elseif($count%$line){
-            $totalPage=(int)($count/$line)+1;
-        }
-        else{
-            $totalPage=$count/$line;
-        }
-        return $totalPage;
     }
 
     //完整查询
@@ -67,7 +51,7 @@ class module
     public function findById($id)
     {
         $tableName = $this->tableName;
-        $data = null;
+        $data = array();
         $dc = dbConnect::dbConn();
         $findByIdSql = "select * from $tableName where id='$id'";
         $findById = $dc->query($findByIdSql);
@@ -156,21 +140,4 @@ class module
         return $login;
     }
 
-    //分页查询
-    public function paginate($page, $line)
-    {
-        $data = array();
-        $start=($page-1)*$line;
-        $tableName = $this->tableName.'_desc';
-        $dc = dbConnect::dbConn();
-        $paginateSql = "SELECT * FROM $tableName LIMIT $start,$line";
-        $paginate = $dc->query($paginateSql);
-        if (mysqli_num_rows($paginate) > 0) {
-            while ($arr = mysqli_fetch_array($paginate)) {
-                $data[] = $arr;
-            }
-            return $data;
-        }
-        return $data;
-    }
 }

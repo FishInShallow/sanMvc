@@ -7,6 +7,7 @@
  */
 class IndexController extends controller{
     public function index(){
-        require VIEWS_BASE_PATH.'/welcome.php';
+        $view=new view();
+        $view->show('/welcome.php');
     }
 }
