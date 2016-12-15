@@ -9,4 +9,4 @@ $route=new route();
 $route->addRoute("/","IndexController","index");
 
 //开始分发
-$route->distribute($_SERVER['PATH_INFO']);
+$route->distribute($_GET['opt']);
