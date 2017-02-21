@@ -1,4 +1,6 @@
 <?php
+namespace core;
+use mysqli;
 class dbConnect{
     public static function dbConn(){
         $dc=new mysqli(DATABASE_URL,DATABASE_USER,DATABASE_PASSWORD,DATABASE_NAME);

@@ -5,6 +5,15 @@
  * Date: 16/7/31
  * Time: 下午12:41
  */
+require_once 'core/controller.php';
+require_once 'core/db/dbConnect.php';
+require_once 'core/configuration.php';
+require_once 'core/error_manager.php';
+require_once 'core/fileManager.php';
+require_once 'core/module.php';
+require_once 'core/route.php';
+require_once 'core/view.php';
+
 //项目所在完整路径
 define('BASE_PATH',dirname(__FILE__));
 //mvc核心和插件

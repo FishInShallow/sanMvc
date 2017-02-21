@@ -5,7 +5,8 @@
  * Date: 16/7/17
  * Time: 下午3:58
  */
-include CORE_PATH . '/db/dbConnect.php';
+namespace core;
+use core\dbConnect;
 class module
 {
     protected $tableName;

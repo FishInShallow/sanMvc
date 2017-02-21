@@ -1,9 +1,7 @@
 <?php
-include_once 'config.php';
-include_once 'core/module.php';
-include_once 'core/controller.php';
-include_once 'core/view.php';
-include_once 'core/route.php';
+require 'config.php';
+use core\route;
+
 $route=new route();
 //在这里添加路由
 $route->addRoute("/","IndexController","index");

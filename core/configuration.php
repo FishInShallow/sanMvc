@@ -5,6 +5,7 @@
  * Date: 16/8/12
  * Time: 下午8:03
  */
+namespace core;
 class configuration
 {
     //配置读取

@@ -6,6 +6,7 @@
  * Date: 16/7/29
  * Time: 下午4:54
  */
+namespace core;
 class fileManager
 {
     //读取目录

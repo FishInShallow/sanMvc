@@ -11,7 +11,9 @@
 //2. /controller/id
 //3. /controller/method
 //4. /controller/method/id
-include_once './core/error_manager.php';
+namespace core;
+use core\error_manager;
+
 class route
 {
     protected $n = 0;

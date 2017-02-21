@@ -5,6 +5,7 @@
  * Date: 16/7/21
  * Time: 上午2:01
  */
+namespace core;
 class error_manager{
     public static function http_error($code){
         switch ($code){

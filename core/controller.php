@@ -5,6 +5,7 @@
  * Date: 16/7/19
  * Time: 下午8:15
  */
+namespace core;
 class controller
 {
     function __construct($methodName, $id = 0)

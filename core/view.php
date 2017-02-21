@@ -5,6 +5,7 @@
  * Date: 16/8/6
  * Time: 下午2:15
  */
+namespace core;
 class view
 {
     //向页面发送临时消息
