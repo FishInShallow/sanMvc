@@ -129,16 +129,14 @@ class module
         $tableName = $this->tableName;
         $username = $user['username'];
         $password = md5($user['password']);
+        $data = array();
         $dc = dbConnect::dbConn();
-        $loginSql = "SELECT id FROM $tableName WHERE username='$username' AND password='$password'";
+        $loginSql = "select * from $tableName where username='$username' and password='$password'";
         $login = $dc->query($loginSql);
         if (mysqli_num_rows($login) > 0) {
-            $data = mysqli_fetch_array($login);
-            $login = $data['id'];
-        } else {
-            $login = false;
+            $data=mysqli_fetch_array($login);
         }
-        return $login;
+        return $data;
     }
 
 }
