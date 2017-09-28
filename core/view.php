@@ -26,18 +26,31 @@ class view
     {
         //arr: 发送到页面的数据
         session_start();
+        $pagePath=''.STATIC_PAGES_PATH.'/'.md5($url).'.html';
+        if(!is_file($pagePath) || (time())-filemtime($pagePath)>300){
+            $this->createStaticPage($url,$arr);
+        }
+        else{
+            require_once ''.$pagePath.'';
+        }
+        unset($_SESSION['successInfo']);
+        unset($_SESSION['errorInfo']);
+        return $this;
+    }
+    //生成静态页面
+    function createStaticPage($url,$arr){
+        ob_start();
         if (strpos($url, ".php")) {
             foreach ($arr as $key => $value) {
                 $$key = $value;
             }
             $path = VIEWS_BASE_PATH . '/' . $url;
-            require '' . $path . '';
+            require_once '' . $path . '';
         } else {
             header("location:{$url}");
         }
-        unset($_SESSION['successInfo']);
-        unset($_SESSION['errorInfo']);
-        return $this;
+        file_put_contents(STATIC_PAGES_PATH.'/'.md5($_SERVER['QUERY_STRING']).'.html',ob_get_contents());
+        ob_end_flush();
     }
     //总页数
     public function totalPage($count,$line){
