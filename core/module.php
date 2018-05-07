@@ -81,13 +81,19 @@ class module
         $tableName = $this->tableName;
         foreach ($data as $key => $value) {
             $name[] = $key;
-            $val[] = $value;
+            if(is_string($value)){
+                $value=str_replace("'","''",$value);
+                $val[]="'".$value."'";
+            }
+            else {
+                $val[] = $value;
+            }
         }
         for ($i = 0; $i < count($data); $i++) { //格式化为 "set key1='value1',key2='value2',..."
             if ($i < count($data) - 1) {
-                $set = "$set $name[$i]='$val[$i]',";
+                $set = $set.' '.$name[$i].'='.$val[$i].',';
             } else {
-                $set = "$set $name[$i]='$val[$i]'";
+                $set = $set.' '.$name[$i].'='.$val[$i];
             }
         }
         $dc = dbConnect::dbConn();
@@ -106,15 +112,21 @@ class module
         $val = array();
         foreach ($data as $key => $value) {
             $name[] = $key;
-            $val[] = $value;
+            if(is_string($value)){
+                $value=str_replace("'","''",$value);
+                $val[]="'".$value."'";
+            }
+            else {
+                $val[] = $value;
+            }
         }
         for ($i = 0; $i < count($data); $i++) { //格式化为 "key1,key2,..."和"value1,value2,..."
             if ($i < count($data) - 1) {
                 $sql_names = $sql_names . $name[$i] . ',';
-                $sql_values = "$sql_values'$val[$i]',";
+                $sql_values = $sql_values.$val[$i].',';
             } else {
                 $sql_names = $sql_names . $name[$i];
-                $sql_values = "$sql_values'$val[$i]'";
+                $sql_values = $sql_values.$val[$i];
             }
         }
         $dc = dbConnect::dbConn();
