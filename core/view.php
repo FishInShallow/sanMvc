@@ -8,16 +8,18 @@
 namespace core;
 class view
 {
+    function __construct()
+    {
+        session_start();
+    }
     //向页面发送临时消息
     public function withError($errorInfo)
     {
-        session_start();
         $_SESSION['errorInfo'] = $errorInfo;
     }
 
     public function withSuccess($successInfo)
     {
-        session_start();
         $_SESSION['successInfo'] = $successInfo;
     }
 
@@ -25,7 +27,6 @@ class view
     public function show($url, $arr = array())
     {
         //arr: 发送到页面的数据
-        session_start();
         $pagePath=''.STATIC_PAGES_PATH.'/'.md5($url).'.html';
         if(!is_file($pagePath) || (time())-filemtime($pagePath)>300){
             $this->createStaticPage($url,$arr);
