@@ -24,15 +24,26 @@ class view
     }
 
     //展示页面,支持url和php文件路径
-    public function show($url, $arr = array())
+    public function show($url,$arr = array(),$cache=false)
     {
         //arr: 发送到页面的数据
-        $pagePath=''.STATIC_PAGES_PATH.'/'.md5($url).'.html';
-        if(!is_file($pagePath) || (time())-filemtime($pagePath)>300){
-            $this->createStaticPage($url,$arr);
+        if ($cache){
+            $pagePath=''.STATIC_PAGES_PATH.'/'.md5($_SERVER['QUERY_STRING']).'.html';
+            if(!is_file($pagePath) || (is_file($pagePath) && (time()-filemtime($pagePath))>300)){
+                $this->createStaticPage($url,$arr);
+            }
+            require_once ''.$pagePath.'';
         }
         else{
-            require_once ''.$pagePath.'';
+            if (strpos($url, '.php')) {
+                foreach ($arr as $key => $value) {
+                    $$key = $value;
+                }
+                $path = VIEWS_BASE_PATH . '/' . $url;
+                require_once '' . $path . '';
+            }else {
+                header("location:{$url}");
+            }
         }
         unset($_SESSION['successInfo']);
         unset($_SESSION['errorInfo']);
@@ -50,8 +61,8 @@ class view
         } else {
             header("location:{$url}");
         }
-        file_put_contents(STATIC_PAGES_PATH.'/'.md5($_SERVER['QUERY_STRING']).'.html',ob_get_contents());
-        ob_end_flush();
+        file_put_contents(STATIC_PAGES_PATH.'/'.md5($_SERVER['QUERY_STRING']).'.html',ob_get_clean());
+        return $this;
     }
     //总页数
     public function totalPage($count,$line){
