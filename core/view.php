@@ -36,9 +36,11 @@ class view
         }
         else{
             if (strpos($url, '.php')) {
-                foreach ($arr as $key => $value) {
-                    $$key = $value;
-                }
+            	if(count($arr) > 0){
+	                foreach ($arr as $key => $value) {
+	                    $$key = $value;
+	                }
+				}
                 $path = VIEWS_BASE_PATH . '/' . $url;
                 require_once '' . $path . '';
             }else {

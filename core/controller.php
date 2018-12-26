@@ -16,8 +16,8 @@ class controller
 
     function option($methodName, $id)
     {
-        $_method = $_POST['_method'];
-        if (isset($_method)) {   //交给处理表单的方法选择方法来执行
+        $_method = isset($_POST['_method']) ? $_POST['_method'] : 0;
+        if ($_method) {   //交给处理表单的方法选择方法来执行
             $this->formMethods($_method, $id);
         } elseif ($id > 0) {
             $this->$methodName($id);//实现传id的方法

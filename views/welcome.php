@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-    <p>San</p>
+    <p><?php echo $hello ?></p>
 </div>
 </body>
 </html>

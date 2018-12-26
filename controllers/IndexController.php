@@ -10,6 +10,7 @@ use core\view;
 class IndexController extends controller{
     public function index(){
         $view=new view();
-        $view->show('/welcome.php');
+		$hello = 'San';
+        $view->show('/welcome.php',['hello' => $hello],true);
     }
 }
