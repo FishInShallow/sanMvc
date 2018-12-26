@@ -10,6 +10,7 @@ class controller
 {
     function __construct($methodName, $id = 0)
     {
+    	session_start();
         $this->auth();
         $this->option($methodName, $id);
     }
@@ -36,7 +37,7 @@ class controller
 
     function auth()
     {
-
+		
     }
 
 }

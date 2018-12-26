@@ -8,10 +8,6 @@
 namespace core;
 class view
 {
-    function __construct()
-    {
-        session_start();
-    }
     //向页面发送临时消息
     public function withError($errorInfo)
     {
