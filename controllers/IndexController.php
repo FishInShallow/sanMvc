@@ -5,6 +5,7 @@
  * Date: 16/7/20
  * Time: 下午5:12
  */
+namespace controllers;
 use core\controller;
 use core\view;
 class IndexController extends controller{

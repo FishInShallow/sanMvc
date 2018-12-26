@@ -52,7 +52,7 @@ class route
                 $controllerPath = $route[1];    //控制器短路径
                 $methodName = $route[2];    //请求的方法名
                 include_once CONTROLLERS_BASE_PATH."/{$controllerPath}.php"; //控制器完整路径
-                $controllerName=preg_replace("{^.*[/$]}","",$controllerPath);   //最后一个 "/" 后为控制器类名
+                $controllerName='\\controllers\\'.preg_replace("{^.*[/$]}","",$controllerPath);   //最后一个 "/" 后为控制器类名
                 new $controllerName($methodName,$id);   //调用控制器和方法
                 exit();
             }
