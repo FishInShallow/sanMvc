@@ -76,11 +76,10 @@ class fileManager
     //上传文件
     public static function upload($dir, $file)
     {
-        $path = UPLOAD_BASE_PATH . $dir . '/' . $file['name'];
+    	$time = date("YmdHis");
+        $path = UPLOAD_BASE_PATH . $dir . '/' . $time.''.mt_rand(1, 100).'.'.pathinfo($file['name'], PATHINFO_EXTENSION);
         $result = false;
-        if (!file_exists($path)) {
-            $result = move_uploaded_file($file['tmp_name'], iconv('UTF-8', 'UTF-8', $path));
-        }
+        $result = move_uploaded_file($file['tmp_name'], iconv('UTF-8', 'UTF-8', $path));
         return $result;
     }
     //删除目录或文件
