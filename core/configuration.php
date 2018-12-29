@@ -14,7 +14,7 @@ class configuration
     	global $CONFIG;
     	if($name==''){
     		return $CONFIG;
-    	}elseif(iset($CONFIG[$name])){
+    	}elseif(isset($CONFIG[$name])){
     		return $CONFIG[$name];
     	}else{
     		return false;
