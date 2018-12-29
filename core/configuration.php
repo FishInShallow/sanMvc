@@ -9,18 +9,23 @@ namespace core;
 class configuration
 {
     //配置读取
-    public static function getConfig($name)
+    public static function getConfig($name='')
     {
-        $str = file_get_contents(BASE_PATH . '/config.php');
-        preg_match("/" . preg_quote($name) . "='(.*)';/", $str, $value);
-        return $value[1];
+    	global $CONFIG;
+    	if($name==''){
+    		return $CONFIG;
+    	}elseif(iset($CONFIG[$name])){
+    		return $CONFIG[$name];
+    	}else{
+    		return false;
+    	}
     }
     //配置修改
-    public static function updateConfig($name, $value)
+    public static function setConfig($name, $value)
     {
         $str = file_get_contents(BASE_PATH . '/config.php');
-        $str = preg_replace("/" . preg_quote($name) . "=(.*);/", $name . "='{$value}';", $str);
+        $str = preg_replace("/" . $name . "'(\s*)=>(\s*)'(.*)'/", $name."'$1=>$2'{$value}'", $str);
         $result = file_put_contents(BASE_PATH . '/config.php', $str);
-        return $result;
+        return $str;
     }
 }
