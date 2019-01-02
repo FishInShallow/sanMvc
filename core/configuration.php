@@ -8,7 +8,12 @@
 namespace core;
 class configuration
 {
-    //配置读取
+    /**
+	 * 配置读取
+	 * @access public
+	 * @param string $name 配置字段名
+	 * @global array $CONFIG 自定义配置
+	 */
     public static function getConfig($name='')
     {
     	global $CONFIG;
@@ -20,7 +25,13 @@ class configuration
     		return false;
     	}
     }
-    //配置修改
+	
+    /**
+	 * 配置修改
+	 * @access public
+	 * @param string $name 配置字段名
+	 * @param string $value 配置设定值
+	 */
     public static function setConfig($name, $value)
     {
         $str = file_get_contents(BASE_PATH . '/config.php');

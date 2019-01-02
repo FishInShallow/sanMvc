@@ -16,7 +16,10 @@ class module
         $this->tableName = $tableName;  //初始化表名
     }
 
-    //完整查询
+    /**
+	 * 查询所有
+	 * @access public
+	 */
     public function All()
     {
         $tableName = $this->tableName;
@@ -32,7 +35,12 @@ class module
         return $data;
     }
 
-    //条件查询
+    /**
+	 * 条件查询
+	 * @access public
+	 * @param string $name 条件字段名
+	 * @param string $value 条件字段值
+	 */
     public function find($name, $value)
     {
         $tableName = $this->tableName;
@@ -48,7 +56,11 @@ class module
         return $data;
     }
 
-    //单条查询
+    /**
+	 * 单条查询
+	 * @access public
+	 * @param int $id 要查询的目标id
+	 */
     public function findById($id)
     {
         $tableName = $this->tableName;
@@ -62,7 +74,12 @@ class module
         return $data;
     }
 
-    //条件删除
+    /**
+	 * 条件删除
+	 * @access public
+	 * @param string $name 条件字段名
+	 * @param string $value 条件字段值
+	 */
     public function delete($name, $value)
     {
         $tableName = $this->tableName;
@@ -72,7 +89,12 @@ class module
         return $delete;
     }
 
-    //更新
+    /**
+	 * 条目更新
+	 * @access public
+	 * @param array $data 字段-值对应数组
+	 * @param int $id 要更新的条目id
+	 */
     public function update($data, $id)
     {
         $set = '';
@@ -102,7 +124,11 @@ class module
         return $update;
     }
 
-    //插入
+    /**
+	 * 添加条目
+	 * @access public
+	 * @param array $data 字段-值对应数组
+	 */
     public function insert($data)
     {
         $tableName = $this->tableName;

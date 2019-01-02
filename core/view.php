@@ -8,7 +8,12 @@
 namespace core;
 class view
 {
-    //向页面发送临时消息
+    /**
+	 * 临时消息
+	 * @access public
+	 * @param string $errorInfo 消息文本
+	 * @param string $successInfo 消息文本
+	 */
     public function withError($errorInfo)
     {
         $_SESSION['errorInfo'] = $errorInfo;
@@ -19,10 +24,15 @@ class view
         $_SESSION['successInfo'] = $successInfo;
     }
 
-    //展示页面,支持url和php文件路径
+    /**
+	 * 展示页面,支持url和php文件路径
+	 * @access public
+	 * @param string $url url或模板相对路径
+	 * @param array $arr 模板要使用的变量数组
+	 * @param boolean $cache 是否缓存页面
+	 */
     public function show($url,$arr = array(),$cache=false)
     {
-        //arr: 发送到页面的数据
         if ($cache){
             $pagePath=''.STATIC_PAGES_PATH.'/'.md5($_SERVER['QUERY_STRING']).'.html';
             if(!is_file($pagePath) || (is_file($pagePath) && (time()-filemtime($pagePath))>300)){
@@ -47,8 +57,12 @@ class view
         unset($_SESSION['errorInfo']);
         return $this;
     }
-    //生成静态页面
-    function createStaticPage($url,$arr){
+
+    /**
+	 * 生成静态页面
+	 * @access private
+	 */
+    private function createStaticPage($url,$arr){
         ob_start();
         if (strpos($url, ".php")) {
             foreach ($arr as $key => $value) {
@@ -62,13 +76,19 @@ class view
         file_put_contents(STATIC_PAGES_PATH.'/'.md5($_SERVER['QUERY_STRING']).'.html',ob_get_clean());
         return $this;
     }
-    //总页数
-    public function totalPage($count,$line){
+    
+    /**
+	 * 计算页数
+	 * @access private
+	 * @param int $count 数据总数
+	 * @param int $lines 每页条数
+	 */
+    private function totalPage($count,$lines){
         if ($count<$line){
             $totalPage=1;
         }
         elseif($count%$line){
-            $totalPage=(int)($count/$line)+1;
+            $totalPage=(int)($count/$lines)+1;
         }
         else{
             $totalPage=$count/$line;
@@ -76,14 +96,28 @@ class view
         return $totalPage;
     }
 
-    //读取每页数据
+    /**
+	 * 分页
+	 * @access public
+	 * @param array $arr 要分页的数据
+	 * @param int $page 页码
+	 * @param int $lines 数据条数
+	 */
     public function pageData($arr,$page,$lines){
+    	$data=array();
         $start=($page-1)*$lines;
-        $data=array_slice($arr,$start,$lines);
+		$data['totalPage'] = $this -> totalPage(count($arr), $lines)
+        $data['pageData']=array_slice($arr,$start,$lines);
         return $data;
     }
 
-    //模糊查询
+    /**
+	 * 模糊查询
+	 * @access public
+	 * @param array $arr 要查询的数据
+	 * @param string $name 要查询的字段
+	 * @param any $value 关键字
+	 */
     public function search($arr,$name,$value){
         $data=array();
         foreach ($arr as $item){
@@ -95,7 +129,11 @@ class view
         return $data;
     }
 
-    //分页
+    /**
+	 * 分页组件
+	 * @access public
+	 * @param int $totalPage 总页数
+	 */
     public static function paginate($totalPage){
         $url=$_SERVER['PHP_SELF'];
         $url=preg_replace("{/index.php}","",$url);

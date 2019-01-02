@@ -9,7 +9,11 @@
 namespace core;
 class fileManager
 {
-    //读取目录
+    /**
+	 * 读取目录
+	 * @access public
+	 * @param string $path 目录相对路径
+	 */
     public static function getDirs($path)
     {
         $pathName = $path;
@@ -36,7 +40,12 @@ class fileManager
         }
         return $dirArray;
     }
-    //读取文件
+    
+    /**
+	 * 获取文件信息
+	 * @access public
+	 * @param string $path 文件相对路径
+	 */
     public static function getFiles($path)
     {
         $pathName = $path;
@@ -63,7 +72,12 @@ class fileManager
         }
         return $fileArray;
     }
-    //新建目录
+    
+    /**
+	 * 创建文件夹
+	 * @access public
+	 * @param string $dir 要创建的文件夹相对路径
+	 */
     public static function createFolder($dir)
     {
         $dir = UPLOAD_BASE_PATH . $dir;
@@ -73,7 +87,13 @@ class fileManager
         }
         return $result;
     }
-    //上传文件
+    
+    /**
+	 * 上传文件
+	 * @access public
+	 * @param string $dir 要上传的目录相对路径
+	 * @param array $file 要上传的文件
+	 */
     public static function upload($dir, $file)
     {
     	$time = date("YmdHis");
@@ -82,7 +102,12 @@ class fileManager
         $result = move_uploaded_file($file['tmp_name'], iconv('UTF-8', 'UTF-8', $path));
         return $result;
     }
-    //删除目录或文件
+    
+    /**
+	 * 删除目录或文件
+	 * @access public
+	 * @param string $filePath 文件或目录相对路径
+	 */
     public static function delFile($filePath)
     {
         $path = UPLOAD_BASE_PATH . $filePath;
@@ -104,7 +129,12 @@ class fileManager
         }
         return $result;
     }
-    //下载文件
+    
+    /**
+	 * 下载文件
+	 * @access public
+	 * @param string $filePath 文件相对路径
+	 */
     public static function download($filePath){
         $result=false;
         $path=UPLOAD_BASE_PATH.$filePath;
