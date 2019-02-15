@@ -41,7 +41,7 @@ class route
             $model=preg_replace("{/$}","",$opt);    //与没有末尾 "/" 的请求等同
         }
         elseif(preg_match("{^[0-9]*$}",$isId)==1){  //带参数:example.com/a/b/1
-            $model=preg_replace("{(/[0-9]*)$}","/",$opt);   //把纯数字判断为参数进行处理,"/" 代表使用带参数的路由
+            $model=preg_replace("{(/[0-9]*)$}","/:id",$opt);   //把纯数字判断为参数进行处理,"/:id" 代表使用带参数的路由
             $id=$isId;
         }
         else{

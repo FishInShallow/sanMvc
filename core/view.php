@@ -106,7 +106,7 @@ class view
     public function pageData($arr,$page,$lines){
     	$data=array();
         $start=($page-1)*$lines;
-		$data['totalPage'] = $this -> totalPage(count($arr), $lines)
+		$data['totalPage'] = $this -> totalPage(count($arr), $lines);
         $data['pageData']=array_slice($arr,$start,$lines);
         return $data;
     }
