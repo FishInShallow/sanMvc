@@ -22,5 +22,7 @@ define('MODELS_BASE_PATH',BASE_PATH.'/models');
 define('VIEWS_BASE_PATH',BASE_PATH.'/views');
 //上传文件夹
 define('UPLOAD_BASE_PATH',BASE_PATH.'/upload');
-//静态页面地址
+//静态资源目录
+define('STATIC_PATH',BASE_PATH.'/static');
+//静态页面目录
 define('STATIC_PAGES_PATH',BASE_PATH.'/staticPages');
