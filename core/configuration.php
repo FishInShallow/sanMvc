@@ -37,6 +37,6 @@ class configuration
         $str = file_get_contents(BASE_PATH . '/config.php');
         $str = preg_replace("/" . $name . "'(\s*)=>(\s*)'(.*)'/", $name."'$1=>$2'{$value}'", $str);
         $result = file_put_contents(BASE_PATH . '/config.php', $str);
-        return $str;
+        return $result;
     }
 }

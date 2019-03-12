@@ -160,21 +160,4 @@ class module
         $insert = $dc->query($insertSql);
         return $insert;
     }
-
-    //登陆
-    public function login($user)
-    {
-        $tableName = $this->tableName;
-        $username = $user['username'];
-        $password = md5($user['password']);
-        $data = array();
-        $dc = dbConnect::dbConn();
-        $loginSql = "select * from $tableName where username='$username' and password='$password'";
-        $login = $dc->query($loginSql);
-        if (mysqli_num_rows($login) > 0) {
-            $data=mysqli_fetch_array($login);
-        }
-        return $data;
-    }
-
 }
